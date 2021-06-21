@@ -19,6 +19,6 @@ export class LiveService {
   constructor(private httpClient: HttpClient) {}
 
   public getLivesWithFlag(flag: string): Observable<ResponsePageable> {
-    return this.httpClient.get<ResponsePageable>(this.apiUrl + '?flag=' + flag)
+    return this.httpClient.get<ResponsePageable>(this.apiUrl + '?flag=' + flag);
   }
 }
