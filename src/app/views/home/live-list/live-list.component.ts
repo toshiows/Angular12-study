@@ -33,6 +33,9 @@ export class LiveListComponent implements OnInit {
         data => {
           this.livesNext = data.content;
           console.log(this.livesPrevious);
+          this.livesNext.forEach(live => {
+            live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
+          });
         });
   }
 }
