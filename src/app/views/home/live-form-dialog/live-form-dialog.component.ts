@@ -36,6 +36,9 @@ export class LiveFormDialogComponent implements OnInit {
     this.rest.postLives(this.liveForm.value).subscribe(result => { });
 
     this.cancel();
+
+
+    window.location.reload();
   }
 
   cancel(): void {
